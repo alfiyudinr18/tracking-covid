@@ -25,7 +25,7 @@
                 <li class="sidebar-item">
                     <a href="{{ route('kelurahan.index') }}" class="sidebar-link">
                         <i class="mdi mdi-view-parallel"></i>
-                        <span class="hide-menu"> Keluarahan </span>
+                        <span class="hide-menu"> Kelurahan </span>
                     </a>
                 </li>
                 <li class="sidebar-item">
