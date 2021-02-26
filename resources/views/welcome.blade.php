@@ -91,7 +91,7 @@
                             <div class="icon"><img src="{{ asset('frontEnd/assets/img/positif.png') }}" alt="Image"
                                     class="img-fluid"></div>
                             <div class="col-md-12 text-center">
-                                <h4 class="title">0</h4>
+                                <h4 class="title"></h4>
                                 <strong>Positif</strong>
                             </div>
                         </div>
@@ -102,7 +102,7 @@
                             <div class="icon"><img src="{{ asset('frontEnd/assets/img/sembuh.png') }}" alt="Image"
                                     class="img-fluid"></div>
                             <div class="col-md-12">
-                                <h4 class="title">0</h4>
+                                <h4 class="title"></h4>
                                 <strong>Sembuh</strong>
                             </div>
                         </div>
@@ -113,7 +113,7 @@
                             <div class="icon"><img src="{{ asset('frontEnd/assets/img/mati.png') }}" alt="Image"
                                     class="img-fluid"></div>
                             <div class="col-md-12">
-                                <h4 class="title">0</h4>
+                                <h4 class="title"></h4>
                                 <strong>Meninggal</strong>
                             </div>
                         </div>
@@ -132,7 +132,6 @@
         </section><!-- End Why Us Section --> --}}
 
         <!-- ======= Features Section ======= -->
-
 
 
         <!-- End Features Section -->
