@@ -132,7 +132,7 @@
         </section><!-- End Why Us Section --> --}}
 
         <!-- ======= Features Section ======= -->
-        <section class="features">
+        {{-- <section class="features">
             <div class="container">
                 <div class="section-title">
                     <h2>Data Indonesia</h2>
@@ -167,9 +167,9 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> --}}
 
-        <section class="features">
+        {{-- <section class="features">
             <div class="container">
                 <div class="section-title">
                     <h2>Data Global</h2>
@@ -205,7 +205,8 @@
                     </div>
                 </div>
             </div>
-        </section><!-- End Features Section -->
+        </section> --}}
+        <!-- End Features Section -->
 
     </main><!-- End #main -->
 
