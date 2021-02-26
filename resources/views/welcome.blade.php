@@ -132,80 +132,9 @@
         </section><!-- End Why Us Section --> --}}
 
         <!-- ======= Features Section ======= -->
-        {{-- <section class="features">
-            <div class="container">
-                <div class="section-title">
-                    <h2>Data Indonesia</h2>
-                </div>
-                <div class="card">
-                    <div class="card-body">
-                        <div class="table-responsive">
-                            <table class="table table-striped table-bordered" id="datatable">
-                                <thead>
-                                    <tr>
-                                        <th>No</th>
-                                        <th>Provinsi</th>
-                                        <th>Positif</th>
-                                        <th>Sembuh</th>
-                                        <th>Meninggal</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    @php $no=1; @endphp
-                                    @foreach ($provinsi as $data)
-                                        <tr>
-                                            <td>{{ $no++ }}</td>
-                                            <td>{{ $data->nama_provinsi }}</td>
-                                            <td>{{ $data->positif }}</td>
-                                            <td>{{ $data->sembuh }}</td>
-                                            <td>{{ $data->meninggal }}</td>
-                                        </tr>
-                                    @endforeach
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section> --}}
 
-        {{-- <section class="features">
-            <div class="container">
-                <div class="section-title">
-                    <h2>Data Global</h2>
-                </div>
-                <div class="card">
-                    <div class="card-body">
-                        <div class="table-responsive service my-custom-scrollbar table-wrapper-scroll-y">
-                            <table class="table table-striped table-bordered table-hover mb-0 text-nowrap css-serial"
-                                id="datatable">
-                                <thead>
-                                    <tr>
-                                        <th>No</th>
-                                        <th>Negara</th>
-                                        <th>Positif</th>
-                                        <th>Sembuh</th>
-                                        <th>Meninggal</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    @php $no=1; @endphp
-                                    @foreach ($url as $data)
-                                        <tr>
-                                            <td>{{ $no++ }}</td>
-                                            <td>{{ $data['attributes']['Country_Region'] }}</td>
-                                            <td>{{ $data['attributes']['Confirmed'] }}</td>
-                                            <td>{{ $data['attributes']['Recovered'] }}</td>
-                                            <td>{{ $data['attributes']['Deaths'] }}</td>
-                                        </tr>
-                                    @endforeach
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section> --}}
+
+
         <!-- End Features Section -->
 
     </main><!-- End #main -->
