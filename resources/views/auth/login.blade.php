@@ -10,7 +10,7 @@
     <meta name="author" content="">
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('assets/assets/images/favicon.png') }}">
-    <title>Nice admin Template - The Ultimate Multipurpose admin template</title>
+    <title>Tracking Covid</title>
     <!-- Custom CSS -->
     <link href="{{ asset('assets/dist/css/style.min.css') }}" rel="stylesheet">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -87,7 +87,7 @@
                                                 id="remember" {{ old('remember') ? 'checked' : '' }}>
                                             <label class="custom-control-label" for="remember">Remember me</label>
                                             @if (Route::has('password.request'))
-                                                <a href="{{ route('password.request') }}" id="to-recover"
+                                                <a href="javascript:void(0)" id="to-recover"
                                                     class="text-dark float-right"><i class="fa fa-lock m-r-5"></i>
                                                     Forgot Password?</a>
                                             @endif
@@ -130,15 +130,24 @@
                     </div>
                     <div class="row m-t-20">
                         <!-- Form -->
-                        <form class="col-12" action="index.html">
-                            <!-- email -->
+                        <form class="col-12" method="POST" action="{{ route('password.email') }}">
+                            @csrf
+
                             <div class="form-group row">
                                 <div class="col-12">
-                                    <input class="form-control form-control-lg" type="email" required=""
-                                        placeholder="Username">
+                                    <input id="email" type="email"
+                                        class="form-control form-control-lg @error('email') is-invalid @enderror"
+                                        name="email" value="{{ $email ?? old('email') }}" placeholder="Email"
+                                        required autocomplete="email" autofocus>
+
+                                    @error('email')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
                                 </div>
                             </div>
-                            <!-- pwd -->
+
                             <div class="row m-t-20">
                                 <div class="col-12">
                                     <button class="btn btn-block btn-lg btn-danger" type="submit"

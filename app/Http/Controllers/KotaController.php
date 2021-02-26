@@ -17,13 +17,13 @@ class KotaController extends Controller
     public function index()
     {
         $kota = Kota::with('provinsi')->get();
-        return view('admin.kota.index',compact('kota'));
+        return view('kota.index',compact('kota'));
     }
 
     public function create()
     {
         $provinsi = Provinsi::all();
-        return view('admin.kota.create',compact('provinsi'));
+        return view('kota.create',compact('provinsi'));
     }
 
     public function store(Request $request)
@@ -44,20 +44,20 @@ class KotaController extends Controller
         $kota->nama_kota = $request->nama_kota;
         $kota->id_provinsi = $request->id_provinsi;
         $kota->save();
-        return redirect()->route('admin.kota.index')->with('toast_success', 'Kabupaten/Kota berhasil dibuat!');
+        return redirect()->route('kota.index')->with('toast_success', 'Kabupaten/Kota berhasil dibuat!');
     }
 
     public function show($id)
     {
         $kota = Kota::findOrFail($id);
-        return view('admin.kota.show',compact('kota'));
+        return view('kota.show',compact('kota'));
     }
 
     public function edit($id)
     {
         $kota = Kota::findOrFail($id);
         $provinsi = Provinsi::all();
-        return view('admin.kota.edit',compact('kota','provinsi'));
+        return view('kota.edit',compact('kota','provinsi'));
     }
 
     public function update(Request $request, $id)
@@ -76,12 +76,12 @@ class KotaController extends Controller
         $kota->nama_kota = $request->nama_kota;
         $kota->id_provinsi = $request->id_provinsi;
         $kota->save();
-        return redirect()->route('admin.kota.index')->with('toast_success', 'Kabupaten/Kota berhasil diedit!');
+        return redirect()->route('kota.index')->with('toast_success', 'Kabupaten/Kota berhasil diedit!');
     }
 
     public function destroy($id)
     {
         $kota = Kota::findOrFail($id)->delete();
-        return redirect()->route('admin.kota.index')->with('success', 'Kabupaten/Kota berhasil dihapus!');
+        return redirect()->route('kota.index')->with('success', 'Kabupaten/Kota berhasil dihapus!');
     }
 }

@@ -17,13 +17,13 @@ class RwController extends Controller
     public function index()
     {
         $rw = Rw::with('kelurahan')->get();
-        return view('admin.rw.index',compact('rw'));
+        return view('rw.index',compact('rw'));
     }
 
     public function create()
     {
         $kelurahan = Kelurahan::all();
-        return view('admin.rw.create',compact('kelurahan'));
+        return view('rw.create',compact('kelurahan'));
     }
 
     public function store(Request $request)
@@ -39,20 +39,20 @@ class RwController extends Controller
         $rw->no_rw = $request->no_rw;
         $rw->id_kelurahan = $request->id_kelurahan;
         $rw->save();
-        return redirect()->route('admin.rw.index')->with('toast_success', 'RW berhasil dibuat!');
+        return redirect()->route('rw.index')->with('toast_success', 'RW berhasil dibuat!');
     }
 
     public function show($id)
     {
         $rw = Rw::findOrFail($id);
-        return view('admin.rw.show',compact('rw'));
+        return view('rw.show',compact('rw'));
     }
 
     public function edit($id)
     {
         $rw = Rw::findOrFail($id);
         $kelurahan = Kelurahan::all();
-        return view('admin.rw.edit',compact('rw','kelurahan'));
+        return view('rw.edit',compact('rw','kelurahan'));
     }
 
     public function update(Request $request, $id)
@@ -68,12 +68,12 @@ class RwController extends Controller
         $rw->no_rw = $request->no_rw;
         $rw->id_kelurahan = $request->id_kelurahan;
         $rw->save();
-        return redirect()->route('admin.rw.index')->with('toast_success', 'RW berhasil diedit!');
+        return redirect()->route('rw.index')->with('toast_success', 'RW berhasil diedit!');
     }
 
     public function destroy($id)
     {
         $rw = Rw::findOrFail($id)->delete();
-        return redirect()->route('admin.rw.index')->with('success', 'RW berhasil dihapus!');
+        return redirect()->route('rw.index')->with('success', 'RW berhasil dihapus!');
     }
 }

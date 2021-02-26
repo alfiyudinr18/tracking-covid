@@ -17,22 +17,20 @@ class KelurahanController extends Controller
     public function index()
     {
         $kelurahan = Kelurahan::with('kecamatan')->get();
-        return view('admin.kelurahan.index',compact('kelurahan'));
+        return view('kelurahan.index',compact('kelurahan'));
     }
 
     public function create()
     {
         $kecamatan = Kecamatan::all();
-        return view('admin.kelurahan.create',compact('kecamatan'));
+        return view('kelurahan.create',compact('kecamatan'));
     }
 
     public function store(Request $request)
     {
         $request->validate([
             'nama_kelurahan' => 'required|unique:kelurahans',
-            'id_kecamatan' => 'required'
         ], [
-            'id_kecamatan.required' => 'Id kecamatan Harus Di Isi!',
             'nama_kelurahan.required' => 'Nama Kelurahan Harus Di Isi!',
             'nama_kelurahan.unique' => 'Nama Kelurahan Sudah Terpakai!'
         ]);
@@ -40,41 +38,39 @@ class KelurahanController extends Controller
         $kelurahan->nama_kelurahan = $request->nama_kelurahan;
         $kelurahan->id_kecamatan = $request->id_kecamatan;
         $kelurahan->save();
-        return redirect()->route('admin.kelurahan.index')->with('toast_success', 'Kelurahan/Desa berhasil dibuat!');
+        return redirect()->route('kelurahan.index')->with('toast_success', 'Kelurahan/Desa berhasil dibuat!');
     }
 
     public function show($id)
     {
         $kelurahan = Kelurahan::findOrFail($id);
-        return view('admin.kelurahan.show',compact('kelurahan'));
+        return view('kelurahan.show',compact('kelurahan'));
     }
 
     public function edit($id)
     {
         $kelurahan = Kelurahan::findOrFail($id);
         $kecamatan = Kecamatan::all();
-        return view('admin.kelurahan.edit',compact('kelurahan','kecamatan'));
+        return view('kelurahan.edit',compact('kelurahan','kecamatan'));
     }
 
     public function update(Request $request, $id)
     {
         $request->validate([
             'nama_kelurahan' => 'required',
-            'id_kecamatan' => 'required'
         ], [
-            'id_kecamatan.required' => 'Id kecamatan Harus Di Isi!',
             'nama_kelurahan.required' => 'Nama Kelurahan Harus Di Isi!'
         ]);
         $kelurahan = Kelurahan::findOrFail($id);
         $kelurahan->nama_kelurahan = $request->nama_kelurahan;
         $kelurahan->id_kecamatan = $request->id_kecamatan;
         $kelurahan->save();
-        return redirect()->route('admin.kelurahan.index')->with('toast_success', 'Kelurahan/Desa berhasil diedit!');;
+        return redirect()->route('kelurahan.index')->with('toast_success', 'Kelurahan/Desa berhasil diedit!');;
     }
 
     public function destroy($id)
     {
         $kelurahan = Kelurahan::findOrFail($id)->delete();
-        return redirect()->route('admin.kelurahan.index')->with('success', 'Kelurahan/Desa berhasil dihapus!');
+        return redirect()->route('kelurahan.index')->with('success', 'Kelurahan/Desa berhasil dihapus!');
     }
 }

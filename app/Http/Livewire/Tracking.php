@@ -7,6 +7,7 @@ use App\Models\Kelurahan;
 use App\Models\Kecamatan;
 use App\Models\Kota;
 use App\Models\Provinsi;
+use App\Models\Kasus;
 use Livewire\Component;
 
 class Tracking extends Component

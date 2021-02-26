@@ -17,13 +17,13 @@ class KasusController extends Controller
     public function index()
     {
         $kasus = Kasus::with('rw.kelurahan.kecamatan.kota.provinsi')->get();
-        return view('admin.kasus.index',compact('kasus'));
+        return view('kasus.index',compact('kasus'));
     }
 
     public function create()
     {
         $rw = rw::all();
-        return view('admin.kasus.create',compact('rw'));
+        return view('kasus.create',compact('rw'));
     }
 
     public function store(Request $request)
@@ -48,20 +48,20 @@ class KasusController extends Controller
         $kasus->tanggal = $request->tanggal;
         $kasus->id_rw = $request->id_rw;
         $kasus->save();
-        return redirect()->route('admin.kasus.index')->with('toast_success', 'Kasus berhasil dibuat!');
+        return redirect()->route('kasus.index')->with('toast_success', 'Kasus berhasil dibuat!');
     }
 
     public function show($id)
     {
         $kasus = Kasus::findOrFail($id);
-        return view('admin.kasus.show',compact('kasus'));
+        return view('kasus.show',compact('kasus'));
     }
 
     public function edit($id)
     {
         $kasus = Kasus::findOrFail($id);
         $rw = rw::all();
-        return view('admin.kasus.edit',compact('kasus','rw'));
+        return view('kasus.edit',compact('kasus','rw'));
     }
 
     public function update(Request $request, $id)
@@ -86,12 +86,12 @@ class KasusController extends Controller
         $kasus->tanggal = $request->tanggal;
         $kasus->id_rw = $request->id_rw;
         $kasus->save();
-        return redirect()->route('admin.kasus.index')->with('toast_success', 'Kasus berhasil diedit!');
+        return redirect()->route('kasus.index')->with('toast_success', 'Kasus berhasil diedit!');
     }
 
     public function destroy($id)
     {
         $kasus = Kasus::findOrFail($id)->delete();
-        return redirect()->route('admin.kasus.index')->with('success', 'Kasus berhasil dihapus!');
+        return redirect()->route('kasus.index')->with('success', 'Kasus berhasil dihapus!');
     }
 }

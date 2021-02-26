@@ -10,6 +10,7 @@ use App\Models\Rw;
 use App\Models\Kota;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Http;
+use Carbon\Carbon;
 use DB;
 
 class ApiController extends Controller
@@ -70,7 +71,7 @@ class ApiController extends Controller
                 
         $data = [
             'success' => true,
-            'data' => [$provinsi,$provinsi_],
+            'data' => [$provinsi],
             'message' => 'Menampilkan Provinsi'
         ];
         return response()->json($data, 200);

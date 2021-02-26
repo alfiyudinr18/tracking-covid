@@ -10,6 +10,8 @@ use App\Http\Controllers\RwController;
 use App\Http\Controllers\KasusController;
 use App\Http\Controllers\KasusglobalController;
 use App\Http\Controllers\ReportController;
+use App\Http\Controllers\DashboardController;
+
 
 
 
@@ -24,9 +26,7 @@ use App\Http\Controllers\ReportController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::resource('/', ReportController::class);
 
 Auth::routes();
 
@@ -34,15 +34,12 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Route::group(['prefix'=> 'admin', 'middleware'=> ['auth']], function ()
 {
-    Route::get('/', function () {
-        return view('layouts.app-admin');
-    });
+    Route::resource('/', DashboardController::class);
     Route::resource('provinsi', ProvinsiController::class);
     Route::resource('kota', KotaController::class);
     Route::resource('kecamatan', KecamatanController::class);
     Route::resource('kelurahan', KelurahanController::class);
     Route::resource('rw', RwController::class);
     Route::resource('kasus', KasusController::class);
-    Route::resource('report', ReportController::class);
 
 });
