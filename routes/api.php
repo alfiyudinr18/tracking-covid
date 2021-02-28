@@ -21,6 +21,8 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::get('coba', [ApiController::class,'index']);
 Route::get('positif', [ApiController::class,'positifglobal']);
+Route::get('sembuh', [ApiController::class,'sembuhglobal']);
+Route::get('meninggal', [ApiController::class,'meninggalglobal']);
 Route::get('indonesia', [ApiController::class,'indonesia']);
 Route::get('global', [ApiController::class,'global']);
 Route::get('indonesia/provinsi', [ApiController::class,'sumProvinsi']);
