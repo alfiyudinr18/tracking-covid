@@ -28,7 +28,7 @@ use App\Http\Controllers\DashboardController;
 
 Route::resource('/', ReportController::class);
 
-Auth::routes();
+Auth::routes(['register'=>false,'reset'=>false]);
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 

@@ -111,47 +111,12 @@
                                         </div>
                                     </div>
                                 </div>
-                                
+
                             </form>
                         </div>
                     </div>
                 </div>
-                <div id="recoverform">
-                    <div class="logo">
-                        <span class="db"><img src="{{ asset('assets/assets/images/logo-icon.png') }}"
-                                alt="logo" /></span>
-                        <h5 class="font-medium m-b-20">Recover Password</h5>
-                        <span>Enter your Email and instructions will be sent to you!</span>
-                    </div>
-                    <div class="row m-t-20">
-                        <!-- Form -->
-                        <form class="col-12" method="POST" action="{{ route('password.email') }}">
-                            @csrf
 
-                            <div class="form-group row">
-                                <div class="col-12">
-                                    <input id="email" type="email"
-                                        class="form-control form-control-lg @error('email') is-invalid @enderror"
-                                        name="email" value="{{ $email ?? old('email') }}" placeholder="Email"
-                                        required autocomplete="email" autofocus>
-
-                                    @error('email')
-                                        <span class="invalid-feedback" role="alert">
-                                            <strong>{{ $message }}</strong>
-                                        </span>
-                                    @enderror
-                                </div>
-                            </div>
-
-                            <div class="row m-t-20">
-                                <div class="col-12">
-                                    <button class="btn btn-block btn-lg btn-danger" type="submit"
-                                        name="action">Reset</button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
             </div>
         </div>
         <!-- ============================================================== -->
