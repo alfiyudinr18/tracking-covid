@@ -41,6 +41,6 @@ class ReportController extends Controller
         $url3 = Http::get('https://api.kawalcorona.com/positif')->json();
         $url4 = Http::get('https://api.kawalcorona.com/sembuh')->json();
         $url5 = Http::get('https://api.kawalcorona.com/meninggal')->json();
-        return view('welcome');
+        return view('welcome', compact('provinsi', 'positif', 'sembuh', 'meninggal', 'url2', 'url'));
     }
 }

@@ -14,7 +14,8 @@
                 <div class="card">
                     <div class="card-header">
                         Data Kasus
-                        <a href="{{ route('kasus.create') }}" class="fas fa-plus-square btn btn-dark float-right"></a>
+                        <a href="{{ route('kasus.create') }}" class="fas fa-plus-square btn btn-dark float-right"> Tambah
+                            Data</a>
                     </div>
                     <div class="card-body">
                         <div class="table-responsive">

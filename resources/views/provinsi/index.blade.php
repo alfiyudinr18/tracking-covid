@@ -15,7 +15,7 @@
                     <div class="card-header">
                         Data Provinsi
                         <a href="{{ route('provinsi.create') }}"
-                            class="fas fa-plus-square btn btn-outline-dark float-right"></a>
+                            class="fas fa-plus-square btn btn-outline-dark float-right"> Tambah Data</a>
                     </div>
                     <div class="card-body">
                         <div class="table-responsive">
