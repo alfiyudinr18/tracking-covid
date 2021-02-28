@@ -187,4 +187,14 @@ class ApiController extends Controller
         return response()->json($res, 200);
     }
 
+    public function positifglobal(){
+        $url = Http::get('https://api.kawalcorona.com/positif')->json();
+        $res = [
+            'success' => true,
+            'data' => $url,
+            'message' => 'Menampilkan Global'
+        ];
+        return response()->json($res, 200);
+    }
+
 }
