@@ -205,7 +205,107 @@
                     </div>
                 </div>
             </div>
-        </section><!-- End Features Section -->
+        </section>
+
+        <section class="features">
+            <div class="container">
+
+                <div class="section-title">
+                    <h2>Pencegahan Virus Covid-19</h2>
+                    <p>Virus Covid-19 bukanlah Virus yang seperti pada umum nya, Virus ini adalah jenis Virus yang dapat
+                        menyebar dengan cepat melalui udara.Dibawah ini adalah cara Pencegahan agar terjauh dari Virus
+                        Covid-19.</p>
+                </div>
+
+                <div class="row" data-aos="fade-up">
+                    <div class="col-md-5">
+                        <img src="{{ asset('frontEnd/assets/img/wash_hands.png') }}" class="img-fluid" alt="">
+                    </div>
+                    <div class="col-md-7 pt-4">
+                        <h3>Mencuci Tangan dengan Benar.</h3>
+                        <p class="font-italic">
+                            Mencuci tangan dengan benar adalah cara paling sederhana namun efektif untuk mencegah
+                            penyebaran virus 2019-nCoV. Cucilah tangan dengan air mengalir dan sabun, setidaknya selama
+                            20 detik. Pastikan seluruh bagian tangan tercuci hingga bersih, termasuk punggung tangan,
+                            pergelangan tangan, sela-sela jari, dan kuku. Setelah itu, keringkan tangan menggunakan
+                            tisu, handuk bersih, atau mesin pengering tangan.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row" data-aos="fade-up">
+                    <div class="col-md-5 order-1 order-md-2">
+                        <img src="{{ asset('frontEnd/assets/img/mask.png') }}" class="img-fluid" alt="">
+                    </div>
+                    <div class="col-md-7 pt-5 order-2 order-md-1">
+                        <h3>Corporis temporibus maiores provident</h3>
+                        <p class="font-italic">
+                            Meski tidak sepenuhnya efektif mencegah paparan kuman, namun penggunaan masker ini tetap
+                            bisa menurunkan risiko penyebaran penyakit infeksi, termasuk infeksi virus Corona.
+                            Penggunaan masker lebih disarankan bagi orang yang sedang sakit untuk mencegah penyebaran
+                            virus dan kuman, ketimbang pada orang yang sehat.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row" data-aos="fade-up">
+                    <div class="col-md-5">
+                        <img src="{{ asset('frontEnd/assets/img/distance.png') }}" class="img-fluid" alt="">
+                    </div>
+                    <div class="col-md-7 pt-5">
+                        <h3>Menjaga Jarak</h3>
+                        <p>Pembatasan fisik atau physical distancing adalah salah satu langkah penting untuk memutus
+                            mata rantai penyebaran virus Corona. Hal ini dapat dilakukan dengan cara tidak bepergian
+                            keluar rumah, kecuali untuk keperluan yang mendesak atau darurat, seperti berbelanja bahan
+                            makanan atau berobat ketika sakit.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="contact" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="500">
+            <div class="container">
+
+                <div class="section-title">
+                    <h2>Kontak</h2>
+                </div>
+
+                <div class="row">
+
+                    <div class="col-lg-12">
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="info-box">
+                                    <i class="bx bx-map"></i>
+                                    <h3>Alamat Kami</h3>
+                                    <p>Jl. Situ Tarate</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="info-box">
+                                    <i class="bx bx-envelope"></i>
+                                    <h3>Email Kami</h3>
+                                    <p>info@smkassalaambandung.sch.id</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="info-box">
+                                    <i class="bx bx-phone-call"></i>
+                                    <h3>Nomor Kami</h3>
+                                    <p>022 5420-220</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+        <!-- End Features Section -->
 
     </main><!-- End #main -->
 
