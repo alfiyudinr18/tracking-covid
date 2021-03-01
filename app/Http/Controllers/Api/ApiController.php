@@ -30,14 +30,16 @@ class ApiController extends Controller
                 ->sum('meninggal');
 
         $data = [
-            'success' => true,
-            'Data'    => 'Data Kasus Indonesia',
-            'Jumlah Positif'    => $positif,
-            'Jumlah Sembuh'     => $sembuh,
-            'Jumlah Meninggal'  => $meinggal,
-            'message'   => "Data Kasus Indonesia"  
+            'positif'    => $positif,
+            'sembuh'     => $sembuh,
+            'meninggal'  => $meinggal, 
         ];
-          return response()->json($data,200); 
+        $res = [
+            'succes' => 200,
+            'data' => [$data],
+            'message' => 'Indonesia'
+        ];
+          return response()->json($res,200); 
     }
 
     public function sumProvinsi()
