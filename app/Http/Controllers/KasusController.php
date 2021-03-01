@@ -48,7 +48,7 @@ class KasusController extends Controller
         $kasus->tanggal = $request->tanggal;
         $kasus->id_rw = $request->id_rw;
         $kasus->save();
-        return redirect()->route('kasus.index')->with('toast_success', 'Kasus berhasil dibuat!');
+        return redirect()->route('kasus.index')->with(['message'=>'Kasus berhasil dibuat!']);
     }
 
     public function show($id)
@@ -86,12 +86,12 @@ class KasusController extends Controller
         $kasus->tanggal = $request->tanggal;
         $kasus->id_rw = $request->id_rw;
         $kasus->save();
-        return redirect()->route('kasus.index')->with('toast_success', 'Kasus berhasil diedit!');
+        return redirect()->route('kasus.index')->with(['message'=>'Kasus berhasil diedit!']);
     }
 
     public function destroy($id)
     {
         $kasus = Kasus::findOrFail($id)->delete();
-        return redirect()->route('kasus.index')->with('success', 'Kasus berhasil dihapus!');
+        return redirect()->route('kasus.index')->with(['message'=>'Kasus berhasil dihapus!']);
     }
 }
