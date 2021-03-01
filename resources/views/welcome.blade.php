@@ -238,7 +238,7 @@
                         <img src="{{ asset('frontEnd/assets/img/mask.png') }}" class="img-fluid" alt="">
                     </div>
                     <div class="col-md-7 pt-5 order-2 order-md-1">
-                        <h3>Corporis temporibus maiores provident</h3>
+                        <h3>Memakai Masker.</h3>
                         <p class="font-italic">
                             Meski tidak sepenuhnya efektif mencegah paparan kuman, namun penggunaan masker ini tetap
                             bisa menurunkan risiko penyebaran penyakit infeksi, termasuk infeksi virus Corona.
@@ -253,7 +253,7 @@
                         <img src="{{ asset('frontEnd/assets/img/distance.png') }}" class="img-fluid" alt="">
                     </div>
                     <div class="col-md-7 pt-5">
-                        <h3>Menjaga Jarak</h3>
+                        <h3>Menjaga Jarak.</h3>
                         <p>Pembatasan fisik atau physical distancing adalah salah satu langkah penting untuk memutus
                             mata rantai penyebaran virus Corona. Hal ini dapat dilakukan dengan cara tidak bepergian
                             keluar rumah, kecuali untuk keperluan yang mendesak atau darurat, seperti berbelanja bahan
