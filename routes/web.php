@@ -12,9 +12,6 @@ use App\Http\Controllers\KasusglobalController;
 use App\Http\Controllers\ReportController;
 use App\Http\Controllers\DashboardController;
 
-
-
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -41,5 +38,4 @@ Route::group(['prefix'=> 'admin', 'middleware'=> ['auth']], function ()
     Route::resource('kelurahan', KelurahanController::class);
     Route::resource('rw', RwController::class);
     Route::resource('kasus', KasusController::class);
-
 });

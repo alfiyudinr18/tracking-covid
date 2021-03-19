@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title>Tracking Covid</title>
+    <title>Kawal Covid</title>
     <meta content="" name="descriptison">
     <meta content="" name="keywords">
 
@@ -68,7 +68,7 @@
             <!-- Slide 1 -->
             <div class="carousel-item active">
                 <div class="carousel-container">
-                    <h2 class="animated fadeInDown"><span>Corona Virus</span></h2>
+                    <h2 class="animated fadeInDown"><span>Kawal Covid</span></h2>
                 </div>
 
 

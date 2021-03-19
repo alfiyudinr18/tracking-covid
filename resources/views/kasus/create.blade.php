@@ -21,7 +21,7 @@
                             </h2>
                             <div class="form-group">
                                 <label for="">Positif</label>
-                                <input type="text" name="positif"
+                                <input type="number" name="positif"
                                     class="form-control @error('positif') is-invalid @enderror"
                                     value="{{ old('positif') }}">
                                 @error('positif')
@@ -30,7 +30,8 @@
                             </div>
                             <div class="form-group">
                                 <label for="">Sembuh</label>
-                                <input type="text" name="sembuh" class="form-control @error('sembuh') is-invalid @enderror"
+                                <input type="number" name="sembuh"
+                                    class="form-control @error('sembuh') is-invalid @enderror"
                                     value="{{ old('sembuh') }}">
                                 @error('sembuh')
                                     <div class="text-danger">{{ $message }}</div>
@@ -38,7 +39,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="">Meninggal</label>
-                                <input type="text" name="meninggal"
+                                <input type="number" name="meninggal"
                                     class="form-control @error('meninggal') is-invalid @enderror"
                                     value="{{ old('meninggal') }}">
                                 @error('meninggal')

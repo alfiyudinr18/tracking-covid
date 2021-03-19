@@ -20,16 +20,17 @@
                             </div>
                             <div class="form-group">
                                 <label for="">Positif</label>
-                                <input type="text" name="positif" value="{{ $kasus->positif }}" class="form-control"
+                                <input type="number" name="positif" value="{{ $kasus->positif }}" class="form-control"
                                     required>
                             </div>
                             <div class="form-group">
                                 <label for="">Sembuh</label>
-                                <input type="text" name="sembuh" value="{{ $kasus->sembuh }}" class="form-control" required>
+                                <input type="number" name="sembuh" value="{{ $kasus->sembuh }}" class="form-control"
+                                    required>
                             </div>
                             <div class="form-group">
                                 <label for="">Meninggal</label>
-                                <input type="text" name="meninggal" value="{{ $kasus->meninggal }}" class="form-control"
+                                <input type="number" name="meninggal" value="{{ $kasus->meninggal }}" class="form-control"
                                     required>
                             </div>
                             <div class="form-group">
